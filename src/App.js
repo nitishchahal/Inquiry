@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar";
+import HomeSection from "./components/HomeSection";
+import InfoSection from "./components/InfoSection";
+import ExploreSection from "./components/ExploreSection";
+import InquiryForm from "./components/InquiryForm";
+import ContactSection from "./components/ContactSection";
+import { useForm } from '@formspree/react';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <HomeSection />
+        <InfoSection />
+        <ExploreSection />
+        <InquiryForm/>
+        <ContactSection />
+      </main>
+    </>
   );
 }
 
